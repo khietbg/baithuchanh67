@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="A" type="text">
+<button onclick="kiemtra()">kiemtra</button>
+<p id="ketqua">ketqua</p>
+<script>
+    function kiemtra(){
+        let a = +document.getElementById('A').value;
+        if (a>0){
+            document.getElementById('A').value = 'là số dương'
+        }else{
+            document.getElementById('A').value = 'là số '
+        }
+    }
+</script>
+</body>
+</html>

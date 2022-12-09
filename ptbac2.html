@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="a" type="text">A<br>
+<input id="b" type="text">B<br>
+<input id="c" type="text">C<br>
+<button onclick="nghiem()">nghiệm là</button>
+<p id="ketqua">nghiệm là</p>
+<script>
+    function nghiem (){
+        let a = +document.getElementById('a').value;
+        let b = +document.getElementById('b').value;
+        let c = +document.getElementById('c').value;
+        let delta = (b*b)-(4*a*c);
+        if (delta<0){
+            document.getElementById('ketqua').innerHTML = 'phương trình vô nghiệm'
+        }else if(delta==0) {
+            document.getElementById('ketqua').innerHTML='phương trình có nghiệm kép'+ -b/2*a;
+        }else if (delta>0) {
+            document.getElementById('ketqua').innerHTML='phương trình có 2 nghiệm phân biệt,x1= '+ (-b+Math.sqrt(delta))/(2*a) +  'x2=' + (-b+Math.sqrt(delta)/(2*a))
+        }
+
+    }
+</script>
+</body>
+</html>
